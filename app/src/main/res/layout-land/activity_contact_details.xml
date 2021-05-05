@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="contactUi"
+            type="org.example.contactsmanager.model.ContactUi" />
+
+        <variable
+            name="viewmodel"
+            type="org.example.contactsmanager.vm.ContactsListVM" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.screens.ContactDetailsView">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_margin="8dp"
+            app:imageUrl="@{contactUi.image}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{v -> viewmodel.onSaveClicked(contactUi)}"
+            android:text="@string/save_contact"
+            app:layout_constraintStart_toStartOf="@+id/appCompatEditText"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatEditText" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{contactUi.firsname}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/name_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+            app:layout_constraintTop_toTopOf="@+id/iv_avatar"
+            tools:ignore="Deprecated"
+            tools:text="John" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/tv_last_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{contactUi.lastname}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/name_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name"
+            tools:text="Doe" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/appCompatEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{contactUi.email}"
+            android:textColor="@color/emailColor"
+            android:textSize="@dimen/email_size"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@+id/tv_last_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_last_name"
+            tools:text="somemail@gmail.com" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Contacts Manager</string>
+    <string name="no_contacts">No contacts!</string>
+    <string name="delete_all"><![CDATA[Clear&Fetch]]></string>
+    <string name="save_contact">Save contact</string>
+    <string name="delete_contact">Delete</string>
+</resources>
