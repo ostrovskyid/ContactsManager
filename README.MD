@@ -9,10 +9,10 @@ Dagger 2, Room, Databinding, Rx, LiveData, ViewModel
 
 
 ### Screeshots
-![](screenshots/1.jpg)
-![](screenshots/2.jpg)
-![](screenshots/3.jpg)
-![](screenshots/4.jpg)
+<img src="screenshots/1.jpeg"  width="200"/>
+<img src="screenshots/2.jpeg"  width="200"/>
+<img src="screenshots/3.jpeg"  width="200"/>
+<img src="screenshots/4.jpeg"  width="200"/>
 
 ## License
 
